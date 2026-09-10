@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yana Ifraimov Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600;700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --paper:#FAF6EE;
+  --paper-2:#F1EBDD;
+  --ink:#221E18;
+  --ink-soft:#4E463B;
+  --stone:#8A8172;
+  --seal:#C4472E;
+  --seal-ink:#FAF6EE;
+  --line:#DED5C2;
+  --shadow:0 1px 2px rgba(34,30,24,.08),0 10px 28px rgba(34,30,24,.10);
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#151310;
+    --paper-2:#1E1B16;
+    --ink:#EDE6D8;
+    --ink-soft:#C9BFAD;
+    --stone:#948A78;
+    --seal:#D65B40;
+    --seal-ink:#151310;
+    --line:#332E26;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.45);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#151310;
+  --paper-2:#1E1B16;
+  --ink:#EDE6D8;
+  --ink-soft:#C9BFAD;
+  --stone:#948A78;
+  --seal:#D65B40;
+  --seal-ink:#151310;
+  --line:#332E26;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 28px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Work Sans",-apple-system,"Segoe UI",Arial,sans-serif;
+  font-weight:400;
+  line-height:1.6;
+  padding-inline:20px;
+  padding-block:0 0;
+}
+.wrap{max-width:1000px;margin:0 auto;}
+a{color:inherit}
+
+/* ---------- hero ---------- */
+header{
+  padding-block:72px 56px;
+  border-bottom:1px solid var(--line);
+}
+.hanko{
+  width:64px;height:64px;
+  background:var(--seal);
+  color:var(--seal-ink);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Zen Old Mincho",serif;
+  font-size:26px;font-weight:700;
+  writing-mode:vertical-rl;
+  letter-spacing:.1em;
+  line-height:1;
+  margin-bottom:28px;
+  box-shadow:var(--shadow);
+}
+h1{
+  font-family:"Zen Old Mincho","Times New Roman",serif;
+  font-weight:600;
+  font-size:clamp(2.2rem,6vw,3.4rem);
+  letter-spacing:.01em;
+  line-height:1.1;
+  margin:0 0 10px;
+  text-wrap:balance;
+}
+.sub{
+  font-size:1.02rem;
+  color:var(--ink-soft);
+  max-width:38em;
+  margin:0 0 20px;
+}
+.meta{
+  display:flex;flex-wrap:wrap;gap:8px 22px;
+  font-size:.82rem;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:var(--stone);
+}
+.meta a{text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* ---------- sections ---------- */
+section{padding-block:64px 24px;}
+.sec-head{
+  display:flex;align-items:baseline;gap:16px;
+  margin-bottom:10px;
+}
+.sec-seal{
+  align-self:center;
+  width:38px;height:38px;flex:none;
+  background:var(--seal);color:var(--seal-ink);
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Zen Old Mincho",serif;
+  font-size:20px;font-weight:700;
+}
+h2{
+  font-family:"Zen Old Mincho","Times New Roman",serif;
+  font-weight:600;
+  font-size:clamp(1.6rem,4vw,2.1rem);
+  margin:0;
+  letter-spacing:.015em;
+}
+.sec-kicker{
+  font-size:.78rem;text-transform:uppercase;letter-spacing:.16em;color:var(--stone);
+}
+.sec-intro{
+  color:var(--ink-soft);
+  max-width:44em;
+  margin:14px 0 8px;
+}
+.sec-intro em{font-style:normal;font-weight:500;color:var(--ink)}
+.tools{
+  margin:16px 0 8px;
+  padding:14px 18px;
+  background:var(--paper-2);
+  border-left:3px solid var(--seal);
+  border-radius:0 8px 8px 0;
+  font-size:.94rem;
+  color:var(--ink-soft);
+  max-width:46em;
+}
+.tools .jp{font-family:"Zen Old Mincho",serif;color:var(--ink)}
+
+/* ---------- galleries ---------- */
+figure{margin:0;break-inside:avoid;}
+figure img{
+  display:block;width:100%;max-width:100%;height:auto;
+  border-radius:6px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  cursor:zoom-in;
+}
+figcaption{
+  padding:10px 2px 0;
+  font-size:.86rem;
+  color:var(--stone);
+}
+figcaption b{
+  display:block;
+  font-weight:500;
+  color:var(--ink);
+  font-size:.95rem;
+}
+.grid-sumie{
+  display:grid;
+  grid-template-columns:1.22fr 1fr;
+  grid-template-areas:"orchid koi" "studio koi";
+  gap:26px;
+  align-items:start;
+  margin-top:26px;
+}
+.fig-orchid{grid-area:orchid}
+.fig-koi{grid-area:koi}
+.fig-studio{grid-area:studio}
+.masonry{
+  columns:2;
+  column-gap:26px;
+  margin-top:26px;
+}
+.masonry figure{margin-bottom:26px;}
+.grid-design{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:26px;
+  margin-top:26px;
+}
+@media (max-width:640px){
+  .grid-sumie{grid-template-columns:1fr;grid-template-areas:"orchid" "koi" "studio"}
+  .masonry{columns:1}
+  .grid-design{grid-template-columns:1fr}
+  header{padding-block:52px 40px}
+}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--line);
+  margin-top:56px;
+  padding-block:40px 64px;
+  display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;
+  font-size:.88rem;color:var(--stone);
+}
+footer .fhanko{
+  width:30px;height:30px;border-radius:5px;
+  background:var(--seal);color:var(--seal-ink);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"Zen Old Mincho",serif;font-size:13px;font-weight:700;
+  writing-mode:vertical-rl;line-height:1;
+}
+footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+
+/* ---------- lightbox ---------- */
+#lb{
+  position:fixed;inset:0;
+  background:rgba(15,13,10,.92);
+  display:flex;align-items:center;justify-content:center;
+  padding:24px;
+  z-index:10;
+  cursor:zoom-out;
+}
+#lb img{max-width:100%;max-height:92vh;border-radius:4px;}
+#lb[hidden]{display:none!important}
+@media (prefers-reduced-motion: no-preference){
+  figure img{transition:transform .25s ease}
+  figure img:hover{transform:translateY(-2px)}
+}
+figure img:focus-visible{outline:2px solid var(--seal);outline-offset:3px}
+a:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Yana Ifraimov</h1>
+  <p class="sub">Portfolio · Sumi-e, digital illustration and graphic design.</p>
+  <div class="meta">
+    <span><a href="mailto:yanaifraim@gmail.com">yanaifraim@gmail.com</a></span>
+    <span>Tel Aviv</span>
+    <span>2026</span>
+  </div>
+</header>
+
+<section id="sumie">
+  <div class="sec-head">
+    <div class="sec-seal" aria-hidden="true">墨</div>
+    <div>
+      <div class="sec-kicker">01 · Traditional</div>
+      <h2>Sumi-e</h2>
+    </div>
+  </div>
+  <p class="sec-intro">Sumi-e (<em>墨絵</em>) is the traditional Japanese art of ink wash painting: capturing the spirit of a subject in as few brushstrokes as possible, where the empty space matters as much as the ink. Each piece is signed with my carved seal, ヤナ.</p>
+  <div class="tools">Painted with the traditional tools: the ink stick (<span class="jp">sumi 墨</span>), ground with water on an ink stone (<span class="jp">suzuri 硯</span>), and bamboo handled brushes (<span class="jp">fude 筆</span>).</div>
+  <div class="grid-sumie">
+    <figure class="fig-orchid">
+      <img src="img/sumie-orchid.jpg" alt="Sumi-e ink painting of a wild orchid growing beside a rock" loading="lazy">
+      <figcaption><b>Wild Orchid by a Rock</b></figcaption>
+    </figure>
+    <figure class="fig-koi">
+      <img src="img/sumie-koi.jpg" alt="Sumi-e painting of four koi fish swimming in a circle, with a red seal" loading="lazy">
+      <figcaption><b>Circle of Koi</b></figcaption>
+    </figure>
+    <figure class="fig-studio">
+      <img src="img/sumie-studio.jpg" alt="Work table with sumi-e tools, brushes, ink stick, ink stone, paint set, surrounded by ink studies" loading="lazy">
+      <figcaption><b>The Practice</b>Brushes, ink stick, ink stone &amp; studies on the work table</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="procreate">
+  <div class="sec-head">
+    <div class="sec-seal" aria-hidden="true">画</div>
+    <div>
+      <div class="sec-kicker">02 · Digital</div>
+      <h2>Procreate</h2>
+    </div>
+  </div>
+  <p class="sec-intro">Digital illustration drawn on iPad in Procreate: character portraits, figure studies, and pieces from the Inktober daily prompt challenge, built with pencil, charcoal, and ink style brushes.</p>
+  <div class="masonry">
+    <figure>
+      <img src="img/pr-portrait-ink.jpg" alt="Digital portrait of a character with black hair on a purple hatched background" loading="lazy">
+      <figcaption><b>Character Portrait</b>Charcoal brushes over hatched ground</figcaption>
+    </figure>
+    <figure>
+      <img src="img/pr-dragon.jpg" alt="Ink-style drawing of cupped hands releasing smoke that forms a dragon" loading="lazy">
+      <figcaption><b>Smoke Dragon</b>Inktober #6 · “Dragon”</figcaption>
+    </figure>
+    <figure>
+      <img src="img/pr-seated.jpg" alt="Soft pencil drawing of a seated girl with long hair and a pleated skirt" loading="lazy">
+      <figcaption><b>Seated Figure</b>Soft pencil study</figcaption>
+    </figure>
+    <figure>
+      <img src="img/pr-turtles.jpg" alt="Pencil drawing of a sea turtle nuzzling its hatchling on sand" loading="lazy">
+      <figcaption><b>Sea Turtle &amp; Hatchling</b>Inktober #18</figcaption>
+    </figure>
+    <figure>
+      <img src="img/pr-mermaid.jpg" alt="Pencil drawing of a mermaid curled beside a bottle labeled Mermaid Tears Potion" loading="lazy">
+      <figcaption><b>Mermaid Tears</b>Inktober #2 · “Potion”</figcaption>
+    </figure>
+    <figure>
+      <img src="img/pr-kiss.jpg" alt="Sketch of two characters kissing, loose pencil lines" loading="lazy">
+      <figcaption><b>The Kiss</b>Inktober #8 · sketch study</figcaption>
+    </figure>
+    <figure>
+      <img src="img/pr-lingerie.jpg" alt="Figure study from behind of a kneeling woman, soft pencil on a warm ground" loading="lazy">
+      <figcaption><b>Figure Study</b>Inktober #21 · “Lingerie”</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="design">
+  <div class="sec-head">
+    <div class="sec-seal" aria-hidden="true">図</div>
+    <div>
+      <div class="sec-kicker">03 · Graphic</div>
+      <h2>Design</h2>
+    </div>
+  </div>
+  <p class="sec-intro">Graphic design created as Head of Marketing at <em>GameDevelopHer</em>, a free game development school for women in Israel: social media, event posters, and a retro gaming brand system used across the community.</p>
+  <div class="grid-design">
+    <figure>
+      <img src="img/ds-cohort.jpg" alt="Social media post styled as a retro game player-select screen showing a Zoom grid of 60 students" loading="lazy">
+      <figcaption><b>60 Players Joined</b>Cohort 7 opening-day post</figcaption>
+    </figure>
+    <figure>
+      <img src="img/ds-gamejam.jpg" alt="Colorful gradient poster for GMTK Game Jam 2026 community site at Xsolla Club Tel Aviv" loading="lazy">
+      <figcaption><b>GMTK Game Jam 2026</b>Community-site poster · Xsolla Club TLV</figcaption>
+    </figure>
+    <figure>
+      <img src="img/ds-student.jpg" alt="Pink character card template reading Game Developer Loading with a retro window frame and a progress bar at 2 percent" loading="lazy">
+      <figcaption><b>Student Character Card</b>Cohort 7 welcome template</figcaption>
+    </figure>
+    <figure>
+      <img src="img/ds-staff.jpg" alt="Pink staff introduction card template with a retro window frame and placeholder text" loading="lazy">
+      <figcaption><b>Staff Intro Card</b>Cohort 7 team template</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer>
+  <div class="fhanko" aria-hidden="true">ヤナ</div>
+  <span>Yana Ifraimov</span>
+  <a href="mailto:yanaifraim@gmail.com">yanaifraim@gmail.com</a>
+  <span>All works by the artist.</span>
+</footer>
+
+</div>
+
+<div id="lb" hidden><img alt=""></div>
+<script>
+(function(){
+  var lb=document.getElementById('lb'), lbImg=lb.querySelector('img');
+  document.querySelectorAll('figure img').forEach(function(im){
+    im.tabIndex=0;
+    function open(){lbImg.src=im.src;lbImg.alt=im.alt;lb.hidden=false;}
+    im.addEventListener('click',open);
+    im.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open();}});
+  });
+  function close(){lb.hidden=true;lbImg.src='';}
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>
