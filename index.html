@@ -166,13 +166,14 @@ figcaption b{
 .grid-sumie{
   display:grid;
   grid-template-columns:1.22fr 1fr;
-  grid-template-areas:"orchid koi" "studio koi" "bamboo bpractice";
+  grid-template-areas:"bpractice orchid" "koi koi" "bamboo studio";
   gap:26px;
   align-items:start;
   margin-top:26px;
 }
 .fig-orchid{grid-area:orchid}
-.fig-koi{grid-area:koi}
+.fig-koi{grid-area:koi;justify-self:center}
+.fig-koi img{width:auto;max-width:100%}
 .fig-studio{grid-area:studio}
 .fig-bamboo{grid-area:bamboo}
 .fig-bamboo-practice{grid-area:bpractice}
@@ -189,7 +190,7 @@ figcaption b{
   margin-top:26px;
 }
 @media (max-width:640px){
-  .grid-sumie{grid-template-columns:1fr;grid-template-areas:"orchid" "koi" "studio" "bamboo" "bpractice"}
+  .grid-sumie{grid-template-columns:1fr;grid-template-areas:"bpractice" "orchid" "koi" "bamboo" "studio"}
   .masonry{columns:1}
   .grid-design{grid-template-columns:1fr}
   header{padding-block:52px 40px}
@@ -255,6 +256,10 @@ a:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
   <p class="sec-intro">Sumi-e (<em>墨絵</em>) is the traditional Japanese art of ink wash painting: capturing the spirit of a subject in as few brushstrokes as possible, where the empty space matters as much as the ink. Each piece is signed with my carved seal, ヤナ.</p>
   <div class="tools">Painted with the traditional tools: the ink stick (<span class="jp">sumi 墨</span>), ground with water on an ink stone (<span class="jp">suzuri 硯</span>), and bamboo handled brushes (<span class="jp">fude 筆</span>).</div>
   <div class="grid-sumie">
+    <figure class="fig-bamboo-practice">
+      <img src="img/sumie-bamboo-practice.jpg" alt="Bamboo practice study on the work table, with brush, ink stone and a cup of ink" loading="lazy">
+      <figcaption><b>Bamboo Study</b>Practice session &mdash; brush, ink &amp; study at the table</figcaption>
+    </figure>
     <figure class="fig-orchid">
       <img src="img/sumie-orchid.jpg" alt="Sumi-e ink painting of a wild orchid growing beside a rock" loading="lazy">
       <figcaption><b>Wild Orchid by a Rock</b></figcaption>
@@ -263,17 +268,13 @@ a:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
       <img src="img/sumie-koi.jpg" alt="Sumi-e painting of four koi fish swimming in a circle, with a red seal" loading="lazy">
       <figcaption><b>Circle of Koi</b></figcaption>
     </figure>
-    <figure class="fig-studio">
-      <img src="img/sumie-studio.jpg" alt="Work table with sumi-e tools, brushes, ink stick, ink stone, paint set, surrounded by ink studies" loading="lazy">
-      <figcaption><b>The Practice</b>Brushes, ink stick, ink stone &amp; studies on the work table</figcaption>
-    </figure>
     <figure class="fig-bamboo">
       <img src="img/sumie-bamboo.jpg" alt="Sumi-e ink painting of bamboo stalks and leaves, signed with a red seal" loading="lazy">
       <figcaption><b>Bamboo</b></figcaption>
     </figure>
-    <figure class="fig-bamboo-practice">
-      <img src="img/sumie-bamboo-practice.jpg" alt="Bamboo practice study on the work table, with brush, ink stone and a cup of ink" loading="lazy">
-      <figcaption><b>Bamboo Study</b>Practice session &mdash; brush, ink &amp; study at the table</figcaption>
+    <figure class="fig-studio">
+      <img src="img/sumie-studio.jpg" alt="Work table with sumi-e tools, brushes, ink stick, ink stone, paint set, surrounded by ink studies" loading="lazy">
+      <figcaption><b>The Practice</b>Brushes, ink stick, ink stone &amp; studies on the work table</figcaption>
     </figure>
   </div>
 </section>
