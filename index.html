@@ -166,16 +166,14 @@ figcaption b{
 .grid-sumie{
   display:grid;
   grid-template-columns:1.22fr 1fr;
-  grid-template-areas:"bpractice orchid" "koi koi" "bamboo studio";
+  grid-template-areas:"bpractice orchid" "koi studio";
   gap:26px;
   align-items:start;
   margin-top:26px;
 }
 .fig-orchid{grid-area:orchid}
-.fig-koi{grid-area:koi;justify-self:center}
-.fig-koi img{width:auto;max-width:100%}
+.fig-koi{grid-area:koi}
 .fig-studio{grid-area:studio}
-.fig-bamboo{grid-area:bamboo}
 .fig-bamboo-practice{grid-area:bpractice}
 .masonry{
   columns:2;
@@ -190,7 +188,7 @@ figcaption b{
   margin-top:26px;
 }
 @media (max-width:640px){
-  .grid-sumie{grid-template-columns:1fr;grid-template-areas:"bpractice" "orchid" "koi" "bamboo" "studio"}
+  .grid-sumie{grid-template-columns:1fr;grid-template-areas:"bpractice" "orchid" "koi" "studio"}
   .masonry{columns:1}
   .grid-design{grid-template-columns:1fr}
   header{padding-block:52px 40px}
@@ -267,10 +265,6 @@ a:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
     <figure class="fig-koi">
       <img src="img/sumie-koi.jpg" alt="Sumi-e painting of four koi fish swimming in a circle, with a red seal" loading="lazy">
       <figcaption><b>Circle of Koi</b></figcaption>
-    </figure>
-    <figure class="fig-bamboo">
-      <img src="img/sumie-bamboo.jpg" alt="Sumi-e ink painting of bamboo stalks and leaves, signed with a red seal" loading="lazy">
-      <figcaption><b>Bamboo</b></figcaption>
     </figure>
     <figure class="fig-studio">
       <img src="img/sumie-studio.jpg" alt="Work table with sumi-e tools, brushes, ink stick, ink stone, paint set, surrounded by ink studies" loading="lazy">
